@@ -36,10 +36,10 @@ public class Rotate {
         System.out.println(JSON.toJSON(nums));
     }
 
-    public static void main(String[] args) {
-        int[] nums = new int[] {1,2};
-        int k = 3;
-        rotate(nums, k);
-    }
+//    public static void main(String[] args) {
+//        int[] nums = new int[] {1,2};
+//        int k = 3;
+//        rotate(nums, k);
+//    }
 
 }
