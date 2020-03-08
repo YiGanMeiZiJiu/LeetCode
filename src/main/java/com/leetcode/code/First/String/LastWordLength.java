@@ -28,9 +28,4 @@ public class LastWordLength {
         return words[words.length-1].length();
     }
 
-    public static void main(String[] args) {
-        String word = "XSUWHQ";
-        System.out.println(lastWordLength(word));
-    }
-
 }
