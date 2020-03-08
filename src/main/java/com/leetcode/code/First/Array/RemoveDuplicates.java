@@ -42,8 +42,4 @@ public class RemoveDuplicates {
         return size;
     }
 
-//    public static void main(String[] args) {
-//        int[] nums = new int[] {-3,-1,0,0,0,3,3};
-//        System.out.println(removeDuplicates(nums));
-//    }
 }

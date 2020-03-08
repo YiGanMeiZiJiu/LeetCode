@@ -31,9 +31,4 @@ public class MaxProfit {
         return dp_i_0;
     }
 
-//    public static void main(String[] args) {
-//        int[] prices = new int[] {7,1,5,3,6,4};
-//        System.out.println(maxProfit(prices));
-//    }
-
 }

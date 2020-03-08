@@ -25,21 +25,11 @@ public class Rotate {
             result[i] = nums[i];
         }
         for (int i = 0; i < length; i++) {
-//            if (i+k < length)
-//                nums[i + k] = result[i];
-//            else
-//                nums[i + k - length] = result[i];
             int size = (i+k) % length;
             nums[size] = result[i];
         }
 //        nums = result;
         System.out.println(JSON.toJSON(nums));
     }
-
-//    public static void main(String[] args) {
-//        int[] nums = new int[] {1,2};
-//        int k = 3;
-//        rotate(nums, k);
-//    }
 
 }
