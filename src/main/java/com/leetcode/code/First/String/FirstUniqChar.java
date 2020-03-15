@@ -1,5 +1,9 @@
 package com.leetcode.code.First.String;
 
+import com.alibaba.fastjson.JSON;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
 import java.util.HashSet;
 
 /**
@@ -30,9 +34,21 @@ public class FirstUniqChar {
         return  -1;
     }
 
-    public static void main(String[] args) {
-        String s = "leetcode";
-        System.out.println(firstUniqChar(s));
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException {
+//        String s = "leetcode";
+//        System.out.println(firstUniqChar(s));
+
+        // 反射
+//        Class isUnique = Class.forName("com.leetcode.code.First.String.IsUnique");
+//        System.out.println(JSON.toJSON(isUnique.getFields()));
+
+        // aop
+        IIsUnique is = new IsUnique();
+        InvocationHandler handle = new IsUniqueProxy<IIsUnique>(is);
+
+        IIsUnique isProxy = (IIsUnique) Proxy.newProxyInstance(IsUnique.class.getClassLoader(), new Class<?>[]{IIsUnique.class}, handle);
+        //执行目标方法
+        isProxy.test();
     }
 
 }

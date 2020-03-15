@@ -9,7 +9,11 @@ package com.leetcode.code.First.String;
  * 输入: s = "abc"
  * 输出: true
  */
-public class IsUnique {
+public class IsUnique implements IIsUnique {
+
+    public static int a = 3;
+
+    public int b = 1;
 
     public boolean isUnique(String astr) {
         for (int i = 0; i < astr.length(); i++) {
@@ -20,6 +24,10 @@ public class IsUnique {
             }
         }
         return false;
+    }
+
+    public void test() {
+        System.out.println("本体方法");
     }
 
 }
